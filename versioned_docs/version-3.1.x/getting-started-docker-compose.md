@@ -110,6 +110,13 @@ services:
 
 ## Create a Pulsar cluster
 
+First, Prepare Data Directory for containers. in container, user id is 10000. because change ownership for in container.
+```
+mkdir -p data/zookeeper
+mkdir -p data/bookkeeper
+sudo chown -R 10000:10000 data
+```
+
 To create a Pulsar cluster by using the `compose.yml` file, run the following command.
 
 ```bash
